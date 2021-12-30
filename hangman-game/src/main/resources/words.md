@@ -4,12 +4,12 @@ java
 javascript
 physic
 study
-kakao
+cacao
 chocolate
 phone
 python
 keyboard
-moniter
+screen
 math
 grade
 development
