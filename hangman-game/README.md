@@ -27,12 +27,12 @@
   javascript
   physic
   study
-  kakao
+  cacao
   chocolate
   phone
   python
   keyboard
-  moniter
+  screen
   math
   grade
   development
@@ -40,6 +40,7 @@
   laptop
   laboratory
   university
+  coffee
   ```
 
   이들 입력 중 하나를 랜덤하게 고르면 된다!
