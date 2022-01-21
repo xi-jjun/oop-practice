@@ -1,4 +1,4 @@
-package hangman.repository;
+package hangman.service;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,23 +6,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WordRepository {
-	private static WordRepository instance = new WordRepository();
-
+public class RandomWordService {
+	private String WORD_FILE_PATH = "src/main/resources/words.md";
 	private List<String> words = new ArrayList<>();
 
-	private WordRepository() {
-
+	public String getRandomWord() throws IOException {
+		List<String> words = getWordsInFile(WORD_FILE_PATH);
+		String randomWord = generateRandomWord(words);
+		return randomWord;
 	}
 
-	public static WordRepository getInstance() {
-		if (instance == null) {
-			return new WordRepository();
-		}
-		return instance;
+	private String generateRandomWord(List<String> words) {
+		int randomIndex = (int) (Math.random() * words.size());
+		return words.get(randomIndex);
 	}
 
-	public List<String> getWordsInFile(String filePath) throws IOException {
+	private List<String> getWordsInFile(String filePath) throws IOException {
 		if (!words.isEmpty()) {
 			return words;
 		}
@@ -31,10 +30,6 @@ public class WordRepository {
 		addWords(wordReader);
 		wordReader.close();
 
-		return words;
-	}
-
-	public List<String> getWords() {
 		return words;
 	}
 
