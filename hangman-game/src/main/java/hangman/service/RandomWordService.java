@@ -21,7 +21,7 @@ public class RandomWordService {
 		return words.get(randomIndex);
 	}
 
-	private List<String> getWordsInFile(String filePath) throws IOException {
+	public List<String> getWordsInFile(String filePath) throws IOException {
 		if (!words.isEmpty()) {
 			return words;
 		}
