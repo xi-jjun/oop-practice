@@ -5,7 +5,6 @@ import java.util.List;
 
 public class AnswerRepository {
 	private static final AnswerRepository instance = new AnswerRepository();
-	private final String TO_BE_ANSWERED = "_";
 	private List<String> currentTriedAnswers = new ArrayList<>();
 	private String answer;
 
